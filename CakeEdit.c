@@ -4,11 +4,29 @@
 #include <string.h>
 int main() {
 	char *str;
-	char *nm;
+	char *nm, c;
 	nm = (char *) malloc(12);
 	str = (char *) malloc(4096);
 	printf("NAME: \n");
 	scanf("%s", nm);
+	FILE *f = fopen(nm, "w");
+        if (f == NULL)
+        {
+            printf("Error opening file! :( \n");
+            exit(1);
+        }
+	printf("EXISTING CONTENTS: ");
+
+	c = fgetc(f);
+    while (c != EOF)
+    {
+        c = fgetc(f);
+
+        printf("%c", c);
+        
+    }
+
+
 	printf("FILE CONTENTS: \n");
 	scanf("%s", str);
 	
@@ -16,17 +34,14 @@ int main() {
 	printf("\n");
 	
 	
-	FILE *f = fopen(nm, "w");
-	if (f == NULL)
-	{
-	    printf("Error opening file! :( \n");
-	    exit(1);
-	}
 	
+	
+        
+
 	/* print some text */
 	printf("Saving your stuff... \n");
 	fprintf(f, " %s\n", str);
-
+	
 	free(str);
 	free(nm);
 	return 0;
