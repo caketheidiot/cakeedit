@@ -5,7 +5,7 @@
 int main() {
 	char *str;
 	char *nm;
-	nm = (char *) malloc(8);
+	nm = (char *) malloc(12);
 	str = (char *) malloc(4096);
 	printf("NAME: \n");
 	scanf("%s", nm);
@@ -26,6 +26,7 @@ int main() {
 	/* print some text */
 	printf("Saving your stuff... \n");
 	fprintf(f, " %s\n", str);
+
 	free(str);
 	free(nm);
 	return 0;
