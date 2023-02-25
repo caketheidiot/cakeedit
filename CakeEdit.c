@@ -10,7 +10,12 @@ int main() {
 	printf("NAME: \n");
 	scanf("%s", nm);
 	if (strlen(nm) > 12) {
-		printf("WARNING: FILENAME EXCEEDS 12 CHAR LIMIT \n");
+		printf("ERROR: Filename exceeds 12 char limit \n");
+		exit(1);
+	}
+	if (strlen(str) > 4096) {
+		printf("ERROR: File contents exceeds 4096 char limit");
+		exit(1);
 	}
 	FILE *f = fopen(nm, "w");
         if (f == NULL)
