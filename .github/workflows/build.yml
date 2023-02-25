@@ -16,4 +16,4 @@ jobs:
           platform: x64
 
       - name: Build
-        run: gcc build -o CakeEdit.elf CakeEdit.c -Wall
+        run: gcc -o CakeEdit.elf CakeEdit.c -Wall
