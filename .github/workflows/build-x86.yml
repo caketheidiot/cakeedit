@@ -1,0 +1,24 @@
+name: Build x86 binaries
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up GCC
+        uses: egor-tensin/setup-gcc@v1
+        with:
+          version: latest
+          platform: x86
+
+      - name: Build
+        run: gcc -o CakeEdit.elf CakeEdit.c -Wall
+      - name: Upload as artefact
+        uses: actions/upload-artifact@v2 
+        with:
+          name: CakeEdit
+          path: CakeEdit.elf
