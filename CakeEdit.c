@@ -1,14 +1,15 @@
-/* This is CakeEdit v1.2.1 */
+/* This is CakeEdit v1.2.3 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 int main() {
 	char *str;
-	char *nm, c;
+	char *nm;
+	char c;
 	nm = (char *) malloc(12);
 	str = (char *) malloc(4096);
 	printf("NAME: \n");
-	scanf("%s", nm);
+	scanf("%4s", nm);
 	if (strlen(nm) > 12) {
 		printf("ERROR: Filename exceeds 12 char limit \n");
 		exit(1);
@@ -38,7 +39,7 @@ int main() {
 	printf("FILE CONTENTS: \n");
 	scanf("%s", str);
 	
-	printf("%s", str);
+
 	printf("\n");
 	
 	
@@ -49,9 +50,10 @@ int main() {
 	/* print some text */
 	printf("Saving your stuff... \n");
 	fprintf(f, " %s\n", str);
-	free(f);	
+	free(f);
 	free(str);
 	free(nm);
+	free(c);
 	return 0;
 }
 
