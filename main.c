@@ -3,7 +3,7 @@
 #import <string.h>
 int main() {
     char *str;
-    char *nm, c;
+    char *nm;
     nm = (char *) malloc(12);
     str = (char *) malloc(4096);
     printf("Name: ");
@@ -21,12 +21,7 @@ int main() {
             printf("Error opening file.");
             exit(1);
         }
-    printf("EXISTING CONTENTS: ");
-    c = fgetc(f);
-    while (c != EOF) {
-        c = fgetc(f);
-        printf("%c", c);
-    }
+    
     printf("Type your file: \n");
     scanf("%s", str);
     printf("\n");
