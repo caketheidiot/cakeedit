@@ -21,10 +21,10 @@ int main() {
             printf("Error opening file.");
             exit(1);
         }
-    
+
     printf("Type your file: \n");
     scanf("%s", str);
-    printf("\n");
+
     printf("Saving... \n");
     fprintf(f, " %s\n", str);
     free(f);
