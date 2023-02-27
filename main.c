@@ -4,8 +4,9 @@
 int main() {
     char *str;
     char *nm;
-    nm = (char *) malloc(12);
-    str = (char *) malloc(4096);
+
+    nm = (char *) malloc(32);
+    str = (char *) malloc(8192);
     printf("Name: ");
     scanf("%s", nm);
     if (strlen(nm) > 12) {
