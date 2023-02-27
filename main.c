@@ -7,7 +7,7 @@ int main() {
     nm = (char *) malloc(12);
     str = (char *) malloc(4096);
     printf("Name: ");
-    scanf("%s", nm);
+    scanf("%c", nm);
     if (strlen(nm) > 12) {
         printf("ERROR: Filename exceeds 12 char limit");
         exit(1);
