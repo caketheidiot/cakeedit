@@ -21,9 +21,8 @@ int main() {
             printf("Error opening file.");
             exit(1);
         }
-
     printf("Type your file: \n");
-    scanf("%s", str);
+    scanf("%c", str);
 
     printf("Saving... \n");
     fprintf(f, " %s\n", str);
