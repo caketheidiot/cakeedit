@@ -13,7 +13,7 @@ int main() {
         exit(1);
     }
     if (strlen(str) > 4096) {
-        printf("ERROR: File contents exceeds 4096 char limit");
+        printf("ERROR: File exceeds 4096 char limit");
         exit(1);
     }
     FILE *f = fopen(nm, "w");
