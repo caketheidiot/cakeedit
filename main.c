@@ -1,13 +1,13 @@
-#import <stdio.h>
-#import <stdlib.h>
-#import <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 int main() {
     char *str;
     char *nm;
     nm = (char *) malloc(12);
     str = (char *) malloc(4096);
     printf("Name: ");
-    scanf("%c", nm);
+    scanf("%s", nm);
     if (strlen(nm) > 12) {
         printf("ERROR: Filename exceeds 12 char limit");
         exit(1);
@@ -22,10 +22,10 @@ int main() {
             exit(1);
         }
     printf("Type your file: \n");
-    scanf("%c", str);
+    scanf("%s", str);
 
     printf("Saving... \n");
-    fprintf(f, " %c\n", str);
+    fprintf(f, " %s\n", str);
     free(f);
     free(str);
     free(nm);
