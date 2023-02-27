@@ -25,7 +25,7 @@ int main() {
     scanf("%c", str);
 
     printf("Saving... \n");
-    fprintf(f, " %s\n", str);
+    fprintf(f, " %c\n", str);
     free(f);
     free(str);
     free(nm);
