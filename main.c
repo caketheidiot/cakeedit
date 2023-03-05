@@ -4,17 +4,18 @@
 int main() {
     char *rbg;
     char *nm;
-
     nm = (char *) malloc(32);
     rbg = (char *) malloc(8192);
+
+    printf("\n");
     printf("Name: ");
     scanf("%s", nm);
     if (strlen(nm) > 12) {
-        printf("ERROR: Filename exceeds 12 char limit");
+        printf("ERROR: Filename exceeds 32 char limit");
         exit(1);
     }
     if (strlen(rbg) > 4096) {
-        printf("ERROR: File exceeds 4096 char limit");
+        printf("ERROR: File exceeds 8192 char limit");
         exit(1);
     }
     FILE *f = fopen(nm, "w");
@@ -24,9 +25,10 @@ int main() {
         }
     printf("Type your file: \n");
     scanf("%s", rbg);
-    ;fprintf(f, " %s\n", rbg);
+    fprintf(f, " %s\n", rbg);
     free(f);
     free(rbg);
     free(nm);
+
     return 0;
 }
