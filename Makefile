@@ -1,5 +1,5 @@
 ##  CakeEdit 
-##  Copyright (C) 2010 Ingo Ruhnke <grumbel@gmx.de>
+##  
 ##
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ BINDIR  = $(PREFIX)/bin
 build/cakeedit:
 	mkdir -p build
         
-	gcc -o cakeedit.bin main.c
+	gcc -o cakeedit.bin main.c -Wall -Wextra -Werror -Wuninitialized
 install: install-exec 
 
 install-exec: build/cakeedit
