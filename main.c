@@ -14,7 +14,7 @@ int main() {
     printf("Name: ");
     scanf("%s", nm);
     if (strlen(nm) > 12) {
-        printf("ERROR: Filename exceeds 32 char limit");
+        printf("ERROR: Filename exceeds 32 char limit \n");
         exit(1);
     }
 
@@ -26,11 +26,12 @@ int main() {
     printf("Type your file: \n");
     scanf("%s", rbg);
 printf("%s", rbg);
+printf("\n");
 		
     
 
     if (strlen(rbg) > 8192) {
-        printf("ERROR: File exceeds 8192 char limit");
+        printf("ERROR: File exceeds 8192 char limit \n");
         exit(1);
     }
     fprintf(f, " %s\n", rbg);
