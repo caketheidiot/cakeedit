@@ -1,11 +1,14 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define BUF_SIZE 8192
 int main() {
-    char *rbg;
+    char rbg[BUF_SIZE];
     char *nm;
+    
     nm = (char *) malloc(32);
-    rbg = (char *) malloc(8192);
+
 
     printf("\n");
     printf("Name: ");
@@ -14,10 +17,7 @@ int main() {
         printf("ERROR: Filename exceeds 32 char limit");
         exit(1);
     }
-    if (strlen(rbg) > 4096) {
-        printf("ERROR: File exceeds 8192 char limit");
-        exit(1);
-    }
+
     FILE *f = fopen(nm, "w");
         if (f == NULL) {
             printf("Error opening file.");
@@ -25,9 +25,17 @@ int main() {
         }
     printf("Type your file: \n");
     scanf("%s", rbg);
+printf("%s", rbg);
+		
+    
+
+    if (strlen(rbg) > 8192) {
+        printf("ERROR: File exceeds 8192 char limit");
+        exit(1);
+    }
     fprintf(f, " %s\n", rbg);
-    free(f);
-    free(rbg);
+    
+    
     free(nm);
 
     return 0;
