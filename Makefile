@@ -1,6 +1,5 @@
 ##  CakeEdit 
-##  
-##
+## 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
 ##  the Free Software Foundation, either version 3 of the License, or
@@ -16,20 +15,13 @@
 
 DESTDIR =
 PREFIX  = /usr/local
-
-
 BINDIR  = $(PREFIX)/bin
-
 build/cakeedit:
 	mkdir -p build
-        
 	gcc -o cakeedit.bin main.c -Wall -Wextra -Werror -Wuninitialized
 install: install-exec 
-
 install-exec: build/cakeedit
 	install -d "$(DESTDIR)$(BINDIR)"
-
 	install build/cakeedit "$(DESTDIR)$(BINDIR)/cakeedit.bin"
 	echo -e "#!/bin/sh\nexec \"$(BINDIR)/cakeedit.bin\" > "$(DESTDIR)$(BINDIR)/cakeedit"
 	chmod 755 "$(DESTDIR)$(BINDIR)/cakeedit"
-
