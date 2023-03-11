@@ -31,6 +31,6 @@ int main() {
     }
     fprintf(f, " %s\n", rbg);
     free(nm);
-    
+    free(f); 
     return 0;
 }
