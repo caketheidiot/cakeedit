@@ -23,7 +23,7 @@ int main() {
     getchar();                         // catching newline character.
     fgets(rbg, 8192, stdin);
     printf("\n");
-    printf("%s", rbg);
+    
     printf("\n");
     if (strlen(rbg) > 8192) {
         printf("ERROR: File exceeds 8192 char limit \n");
