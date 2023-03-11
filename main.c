@@ -6,14 +6,14 @@
 int main() {
     char rbg[BUF_SIZE];
     char *nm;
-    
+    int ret;
     nm = (char *) malloc(32);
 
 
     printf("\n");
     printf("Name: ");
     scanf("%s", nm);
-    if (strlen(nm) > 12) {
+    if (strlen(nm) > 32) {
         printf("ERROR: Filename exceeds 32 char limit \n");
         exit(1);
     }
@@ -24,7 +24,10 @@ int main() {
             exit(1);
         }
     printf("Type your file: \n");
-    scanf("%s", rbg);
+    getchar();                         // catching newline character.
+
+fgets(rbg, 50, stdin);
+    printf("\n");
 printf("%s", rbg);
 printf("\n");
 		
