@@ -32,7 +32,7 @@ int main() {
     }
     fprintf(f, " %s\n", rbg);
     free(nm);
-    free(modef);
+    
      
     return 0;
 }
