@@ -8,7 +8,7 @@ int main() {
     
     char rbg[BUF_SIZE];
     char *nm;
-    modef = (char *) malloc(5);
+    
     
     nm = (char *) malloc(32);
         
