@@ -1,4 +1,4 @@
-# cakeedit- The Text Editor in 36 lines of code
+# cakeedit- The Text Editor in 36-ish lines of code
 A text editor, made in C.
 # Install
 You can install the stable-ish version in the releases thing
