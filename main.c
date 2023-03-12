@@ -5,12 +5,11 @@
 #define BUF_SIZE 8192
 #define TYPE_MODE "a"
 int main() {
-    FILE *rcfptr = fopen("ck.conf", "r"); 
-    char *modef;
+    
     char rbg[BUF_SIZE];
     char *nm;
     modef = (char *) malloc(5);
-    fgets(modef, 5, rcfptr);
+    
     nm = (char *) malloc(32);
         
     printf("Name: ");
