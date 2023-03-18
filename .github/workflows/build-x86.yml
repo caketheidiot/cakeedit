@@ -16,7 +16,7 @@ jobs:
           platform: x86
 
       - name: Build
-        run: gcc -o CakeEdit.elf CakeEdit.c -Wall
+        run: gcc -o CakeEdit.elf main.c -Wall -Werror -Wuninitialized -Wextra
       - name: Upload as artefact
         uses: actions/upload-artifact@v2 
         with:
